@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Basic meta tags -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="description" content="A personal portfolio website template.">
 <title>FrontX Team Dark</title>
-<!-- Awesome 6 icons -->
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-<noscript>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</noscript>
+<!-- Fonts / Icons preload -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </noscript>
 
 <style>
-   /* 1) Global reset – margin/padding 0, border-box */
+   /*  Global reset – margin/padding 0, border-box */
 *,
 *::before,
 *::after {
@@ -24,20 +23,27 @@
   box-sizing: border-box;
 }
 
-
-/* 2) Smooth scrolling for in-page links */
+/* Smooth scrolling for in-page links */
 html {
   scroll-behavior: smooth;
 }
 
-/* 3) Basic body defaults (optional, but useful) */
+/* Basic body defaults (optional, but useful) */
 body {
   min-height: 100vh;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
-  font-family: system-ui, sans-serif;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
  
+h1, h2, h3 {
+  font-family: "Times New Roman", Times, "Liberation Serif", "Georgia", serif;
+}
+
+button {
+  cursor: pointer;
+}
+
 img {
     object-fit: cover;
     width: 100%;
@@ -81,14 +87,19 @@ nav.sidebar {
 }
 
 nav div.container {
-    width: 150px;
+    width: 180px;
     position: fixed;
+    min-height: 100vh;
     inset: 0 auto 0 0;
     z-index: 1;
-    background-color: #222;
+    background-color: rgba(34,34,34,0.95);
+    backdrop-filter: blur(6px);
+    box-shadow: 2px 0 15px rgba(0,0,0,0.4);
     color: #fff;
     text-align: center;
     overflow: auto;
+    border-right: 1px solid rgba(255,255,255,0.05);
+
 }
 
 nav img {
@@ -104,44 +115,67 @@ nav img:hover {
 }
 
 nav a {
-    display: block;
-    padding: 15px;
-    border-bottom: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 15px;
+    margin: 5px 10px;
+    border-radius: 12px;
     font-size: 1.2rem;
-    transition: background-color 0.3s ease;
-}
-
-nav a.active {
-    background-color: #111;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
+    font-weight: 500;
+    color: #fff;
+    background-color: rgba(255,255,255,0.03);
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 nav a:hover {
-  background-color: #333;
-} 
-
-nav a i {
-    width: 100%;
-    margin-bottom: 10px;
-    font-size: 2rem;
+    background-color: rgba(255,255,255,0.08);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
-main {
-    margin-left: 150px;
+nav a.active {
+    background-color: rgba(255,255,255,0.12);
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+nav a i {
+    font-size: 2rem;
+    margin-bottom: 10px;
     color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover i {
+    transform: scale(1.1);
+    color: #00bfff;
+}
+
+
+main {
+    margin-left: 180px;
     background-color: #000;
+    color: #fff;
+    min-height: 100vh;
 }
 
 .hero-section {
+    background-color: #000;
     text-align: center;
     padding: 100px 20px;
 }
 
 .hero-section h1 {
-    font-size: 3.5rem;
-    line-height: 1.2;
-    margin-bottom: 20px;
+    font-size: clamp(2.8rem, 6vw, 4.2rem);
+    line-height: 1.08;
+    letter-spacing: 0.3px;
+    margin-bottom: 28px;    
+    font-weight: 700;
+    color: #fff;
     position: relative;
 }
 
@@ -149,37 +183,43 @@ main {
     content: "";
     position: absolute;
     left: 50%;
-    bottom: 5px; 
     transform: translateX(-50%); 
-    width: 20%;
+    width: 50%;
     height: 4px; 
     bottom: -10px;
     background-color: #fff; 
+    opacity: 0.9;
+    border-radius: 2px;
     transition: width 0.3s ease;
 }
 
 .hero-section h1:hover::after {
-    width: 50%;
+    width: 70%;
 }
 
 .hero-section p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    margin: 0 auto 40px;
+font-size: clamp(1rem, 1.5vw, 1.5rem);
+    line-height: 1.65;
+    color: #e0e0e0;
     max-width: 700px;
+    margin: 0 auto 40px;
+    letter-spacing: 0.2px;
+    font-weight: 400;
 }
-
 .hero-section img {
     width: 100%;
     height: 600px;
     border-radius: 10px;
-    opacity: 1;
-    transition: opacity 0.3s ease;
+    object-fit: cover;
+    object-position: center;
+    transition: filter 0.4s ease, transform 0.4s ease; 
 }
 
 .hero-section img:hover {
-    opacity: 0.8;
+    filter: brightness(1.05);  
+    transform: none;
 }
+
 
 @media only screen and (max-width: 600px) {
     nav.sidebar {
@@ -223,7 +263,9 @@ main {
 }
 
 </style>
-<link rel="stylesheet" href="style.css">
+<link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
+
 </head>
 <body>
 
@@ -259,26 +301,30 @@ main {
   </section>
 
   <!-- About Section -->
-  <section id="about">
-    <h2>My Name</h2>
+  <section id="about" class="about-section">
+    <h2>Ali Khan</h2>
+
     <p>
-      Some text about me. Some text about me. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    I am a passionate web developer and graphic designer with a keen eye for modern, responsive, and visually
+     striking digital experiences. I specialize in creating clean, efficient, and scalable front-end solutions
+      that combine performance, usability, and aesthetic excellence. With a strong foundation in both design
+       and development, I ensure every project not only looks stunning but also functions seamlessly across 
+       devices.
     </p>
+<div class="my-skills">
+<h3>My Skills</h3>
 
-    <h3>My Skills</h3>
+<h4>Front-End Development</h4>
+<div class="progress-bar"><span class="progress w-95"></span></div>
 
-    <h4>Photography</h4>
-    <div></div>
+<h4>Web Design</h4>
+<div class="progress-bar"><span class="progress w-90"></span></div>
 
-    <h4>Web Design</h4>
-    <div></div>
-
-    <h4>Photoshop</h4>
-    <div></div>
-
+<h4>UI/UX Design (Figma)</h4>
+<div class="progress-bar"><span class="progress w-85"></span></div>
+</div>
     <!-- Stats -->
-    <div>
+    <div class="stats-container">
       <div>
         <strong>11+</strong>
         <p>Partners</p>
@@ -297,7 +343,7 @@ main {
       </div>
     </div>
 
-    <button>Download Resume</button>
+    <button class="resume-btn">Download Resume</button>
 
     <!-- Pricing -->
     <h3>My Price</h3>
