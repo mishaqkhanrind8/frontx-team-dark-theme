@@ -362,46 +362,54 @@ font-size: clamp(1rem, 1.5vw, 1.5rem);
     <button class="resume-btn">Download Resume</button>
 
     <!-- Pricing -->
-    <h3>My Price</h3>
+<h3>My Pricing</h3>
 
-    <div>
-      <div>
-        <h4>Basic</h4>
-        <p>Web Design</p>
-        <p>Photography</p>
-        <p>5GB Storage</p>
-        <p>Mail Support</p>
-        <h2>$10</h2>
-        <p>per month</p>
-        <button>Sign Up</button>
-      </div>
+<div class="package-container">
 
-      <div>
-        <h4>Pro</h4>
-        <p>Web Design</p>
-        <p>Photography</p>
-        <p>50GB Storage</p>
-        <p>Endless Support</p>
-        <h2>$25</h2>
-        <p>per month</p>
-        <button>Sign Up</button>
-      </div>
-    </div>
+  <div class="plan basic">
+    <h4>Starter</h4>
+    <p>Landing Page Design (Figma)</p>
+    <p>Responsive Front-End</p>
+    <p>Basic UI Components</p>
+    <p>Email Support</p>
+    <h5>$15</h5>
+    <p>per project</p>
+    <button>Get Started</button>
+  </div>
+
+  <div class="plan pro">
+    <h4>Professional</h4>
+    <p>Full Website UI/UX (Figma)</p>
+    <p>Complete Front-End Development</p>
+    <p>Advanced Animations</p>
+    <p>Priority Support</p>
+    <h5>$49</h5>
+    <p>per project</p>
+    <button>Get Started</button>
+  </div>
+
+</div>
 
     <!-- Testimonials -->
     <h3>My Reputation</h3>
 
-    <div>
-      <img src="person1.jpg" alt="Avatar" width="741" height="369" loading="lazy">
-      <p><strong>Chris Fox</strong> — CEO at Mighty Schools</p>
+    <div class="repu-container">
+       <div class="img-section">
+        <img src="images/female-member.webp" alt="Avatar" width="741" height="369" loading="lazy">
+      </div>
+      <div class="info">
+        <p><strong>Chris Fox</strong> — CEO at Mighty Schools</p>
       <p>John Doe saved us from a web disaster.</p>
-    </div>
+    </div></div>
 
-    <div>
-      <img src="person2.jpg" alt="Avatar" width="741" height="369" loading="lazy">
-      <p><strong>Rebecca Flex</strong> — CEO at Company</p>
+    <div class="repu-container">
+       <div class="img-section">
+        <img src="images/graphic-designer.webp" alt="Avatar" width="741" height="369" loading="lazy">
+     </div>
+     <div class="info">
+        <p><strong>Rebecca Flex</strong> — CEO at Company</p>
       <p>No one is better than John Doe.</p>
-    </div>
+    </div></div>
 
   </section>
 
@@ -409,13 +417,13 @@ font-size: clamp(1rem, 1.5vw, 1.5rem);
   <section id="photos">
     <h2>My Photos</h2>
 
-    <div class="image-section">
-      <img src="wedding.jpg" alt="1st image" width="741" height="369" loading="lazy">
-      <img src="rocks.jpg" alt="2nd image" width="741" height="369" loading="lazy">
-      <img src="sailboat.jpg" alt="3rd image" width="741" height="369" loading="lazy">
-      <img src="underwater.jpg" alt="4th image" width="741" height="369" loading="lazy">
-      <img src="chef.jpg" alt="5th image" width="741" height="369" loading="lazy">
-      <img src="wedding2.jpg" alt="6th image" width="741" height="369" loading="lazy">
+    <div class="photo-section">
+      <img src="images/coding-img.webp" alt="1st image" width="741" height="369" loading="lazy">
+      <img src="images/content-writer-img.webp" alt="2nd image" width="741" height="369" loading="lazy">
+      <img src="images/female-developer.webp" alt="3rd image" width="741" height="369" loading="lazy">
+      <img src="images/team-lead-2.webp" alt="4th image" width="741" height="369" loading="lazy">
+      <img src="images/team-lead.webp" alt="5th image" width="741" height="369" loading="lazy">
+      <img src="images/team-photo.webp" alt="6th image" width="741" height="369" loading="lazy">
     </div>
   </section>
 
@@ -423,11 +431,13 @@ font-size: clamp(1rem, 1.5vw, 1.5rem);
   <section id="contact">
     <h2>Contact Me</h2>
 
+  <address class="address-info">
     <p>Chicago, US</p>
     <p>Phone: +00 151515</p>
-    <p>Email: mail@mail.com</p>
-
-    <form action="#" method="post">
+    <p>Email: khancode88@gmail.com</p>
+   </address>
+   
+   <form action="#" method="post">
       <input type="text" name="Name" placeholder="Name" required>
       <input type="email" name="Email" placeholder="Email" required>
       <input type="text" name="Subject" placeholder="Subject" required>
@@ -438,9 +448,27 @@ font-size: clamp(1rem, 1.5vw, 1.5rem);
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>Powered by <a href="#">Khan Code 88</a></p>
-  </footer>
+ <footer>
+  <ul class="social-links">
+    <li>
+      <a href="https://facebook.com" target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a href="https://instagram.com" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  </ul>
+  <p>Powered by <a href="#">Khan Code 88</a></p>
+</footer>
+
 
 </main>
 
