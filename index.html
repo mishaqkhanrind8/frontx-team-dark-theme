@@ -13,6 +13,46 @@ as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </noscript>
 
+<!-- Standard Favicon -->
+<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon.ico">
+
+<!-- Apple Touch Icon (iPhone/iPad) -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+<!-- Android / PWA Icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="assets/web-app-manifest-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/web-app-manifest-512x512.png">
+
+<!-- Web Manifest (PWA Support) -->
+<link rel="manifest" href="manifest.json">
+
+<!-- Theme Colors -->
+<meta name="theme-color" content="#ffffff">
+<meta name="msapplication-TileColor" content="#ffffff">
+
+<!-- Basic Open Graph -->
+<meta property="og:title" content="FrontX Team – Modern Web Development">
+<meta property="og:description" content="Fast, clean, and modern front-end development services with responsive UI and top performance.">
+<meta property="og:image" content="https://frontendportfolio-puce.vercel.app/assets/og-image.webp">
+<meta property="og:url" content="https://frontendportfolio-puce.vercel.app/">
+<meta property="og:type" content="website">
+
+<!-- WhatsApp / Facebook Specific -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Optional but Recommended -->
+<meta property="og:site_name" content="FrontX Team">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FrontX Team – Modern Web Development">
+<meta name="twitter:description" content="Fast, clean, and modern front-end development services with responsive UI and top performance.">
+<meta name="twitter:image" content="https://frontendportfolio-puce.vercel.app/assets/og-image.webp">
+
+
 <style>
    /*  Global reset – margin/padding 0, border-box */
 *,
@@ -437,7 +477,7 @@ font-size: clamp(1rem, 1.5vw, 1.5rem);
     <p>Email: khancode88@gmail.com</p>
    </address>
    
-   <form action="#" method="post">
+   <form action="" method="post" id="contactForm" class="contact-form">
       <input type="text" name="Name" placeholder="Name" required>
       <input type="email" name="Email" placeholder="Email" required>
       <input type="text" name="Subject" placeholder="Subject" required>

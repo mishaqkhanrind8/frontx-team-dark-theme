@@ -495,12 +495,9 @@ footer .social-links li a:hover {
 
 
 @media (max-width: 600px) {
-    .stats-container {
-        flex-direction: column;
-    }
 
     .stats-container div {
-        flex: 1 1 100%;
+        flex: 1 1 50%;
         margin: 10px 0;
     }
 
@@ -510,5 +507,11 @@ footer .social-links li a:hover {
 
     .plan {
         max-width: 100%;
+        margin: 0 auto;
     }
+
+    .photo-section {
+        grid-template-columns: 1fr;
+    }
+
 }
